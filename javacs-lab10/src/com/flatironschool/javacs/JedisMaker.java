@@ -113,7 +113,8 @@ public class JedisMaker {
 
 	    // Set
 	    jedis.sadd("myset", "element1", "element2", "element3");
-	    System.out.println("element2 is member: " + jedis.sismember("myset", "element2"));
+	    jedis.sadd("myset", "element4");
+	    System.out.println("element4 is member: " + jedis.sismember("myset", "element4"));
 
 	    // List
 	    jedis.rpush("mylist", "element1", "element2", "element3");
